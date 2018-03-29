@@ -1,0 +1,142 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+html, body {
+    background-color: #fff;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto auto;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        ". c c c c c c c c c c ."
+        "f f f f f f f f f f f f"
+}
+
+.container > div {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.header {
+    grid-area: h;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #fff;
+    box-shadow:  0px 8px 16px 0px rgba(104, 11, 11, 0.08);
+}
+
+.header a {
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    color: #BE0505;
+    height: 100%;
+    padding-top: 5px;
+}
+
+.header a:hover {
+    border-top: 3px solid #BE0505;
+}
+
+.active {
+    background-color: #BE0505;
+    border-radius: 7px;
+    border: 2px solid #BE0505;
+    padding: 5px 15px;
+    box-shadow: rgba(190, 5, 5, 0.4) 0px 10px 20px 0px;
+}
+
+.active a {
+    color: #fff;
+}
+
+.home {
+    margin-left: auto;
+}
+
+.header img {
+    width: 90px;
+    height: 90px;
+    margin-left: 120px;
+}
+
+.header > div {
+    font-size: 0.8em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 70px;   
+}
+
+.content {
+    grid-area: c;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: rgba(190, 5, 5, 0.4) 0px 10px 20px 0px;
+}
+
+.content div {
+    text-align: center;
+}
+
+.footer {
+    grid-area: f;
+    text-align: center;
+}
+
+.footer {
+    grid-row: 3/4;
+    background-color: silver;
+    text-align: center;
+}
+
+.footer p, h3, a {
+    font-size: 20px;
+}
+
+.footer p {
+    margin: 5px;
+    padding: 5px;
+}
+
+.footer h3 {
+    margin: 2px;
+    padding: 2px;
+}
+
+.footer i {
+    margin: 3px;
+    padding: 3px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #BE0505;
+}
+
+.footer a:hover {
+    color: rgb(146, 10, 10);
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f"
+    }
+
+    .header img {
+        margin-left: 10px;
+    }
+} 
